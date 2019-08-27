@@ -1,6 +1,9 @@
 <script>
     import { onMount } from 'svelte';
 
+    import Spinner_triangle from '..//layout/Spinner_triangle.svelte';
+    import Spinner_dot from '..//layout/Spinner_dot.svelte';
+
     const apiBaseUrl = 'https://ndb99xkpdk.execute-api.eu-west-2.amazonaws.com/dev';
     let posts = [];
 
@@ -12,7 +15,11 @@
 
 <div class="row">
     {#if posts.length === 0}
-        <h3>Loading posts...</h3>
+        <div class="center">
+            <h3>Loading posts...</h3>
+            <Spinner_triangle />
+            <Spinner_dot />
+        </div>
     {:else}
         {#each posts as post}
             <div class="col s6">
