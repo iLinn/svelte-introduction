@@ -2,6 +2,12 @@
     import { Link } from 'svelte-routing';
 </script>
 
+<style>
+    .container {
+        position: relative;
+    }
+</style>
+
 <nav>
     <div class="nav-wrapper">
         <div class="container">
